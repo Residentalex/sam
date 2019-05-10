@@ -19,8 +19,8 @@ const routes: Routes = [
   {path: 'economico-expenses', component: EconomicoExpensesComponent, data: {title: 'Egresos'}},
   {path: 'economico-cash-summary', component: EconomicoCashSummaryComponent, data: {title: 'Resumen de Caja'}},
   {path: 'economico-accounts', component: EconomicoAccountsComponent, data: {title: 'Estado de Cuenta'}},
-  {path: 'economico-documents-search', component: EconomicoDocumentsSearchComponent, data: {title: 'Consulta de Dcoumentos'}},
-  {path: 'economico-documents-cancel', component: EconomicoDocumentsCancelComponent, data: {title: 'Anulación de Dcouemntos'}},
+  {path: 'economico-documents-search', component: EconomicoDocumentsSearchComponent, data: {title: 'Consulta de Documentos'}},
+  {path: 'economico-documents-cancel', component: EconomicoDocumentsCancelComponent, data: {title: 'Anulación de Docuemntos'}},
   {path: 'economico-inventory', component: EconomicoInventoryComponent, data: {title: 'Inventario'}}
 ];
 

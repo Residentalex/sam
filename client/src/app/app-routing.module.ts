@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './dashboard/dashboard.module#DashboardModule', data: { title: 'Inicio' } },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule', data: { title: 'Dashboard' } },
   { path: 'docentes', loadChildren: './docentes/docentes.module#DocentesModule', data: { title: 'Docentes' } },
   { path: 'alumnos', loadChildren: './alumnos/alumnos.module#AlumnosModule', data: { title: 'Alumnos' } },
   { path: 'evaluacion', loadChildren: './evaluacion/evaluacion.module#EvaluacionModule', data: { title: 'Evaluacion' } },

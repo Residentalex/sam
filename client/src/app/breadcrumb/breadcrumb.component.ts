@@ -10,13 +10,14 @@ import { filter } from 'rxjs/operators';
 export class BreadcrumbComponent implements OnInit {
 
   public breadcrumbs: Breadcrumb[];
-
+  public rutaActiva = '';
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+
     const breadcrumb: Breadcrumb = {
-      label: 'Inicio',
+      label: '',
       url: ''
     };
 
@@ -24,10 +25,9 @@ export class BreadcrumbComponent implements OnInit {
       // set breadcrumbs
       const root: ActivatedRoute = this.route.root;
       this.breadcrumbs = this.getBreadcrumbs(root);
+      this.breadcrumbs = this.breadcrumbs.slice(0, this.breadcrumbs.length - 1);
       this.breadcrumbs = [breadcrumb, ...this.breadcrumbs];
-
     });
-
   }
 
 
@@ -44,12 +44,13 @@ export class BreadcrumbComponent implements OnInit {
 
     // iterate over each children
     for (const child of children) {
+
       // verify primary route
       if (child.outlet !== PRIMARY_OUTLET || child.snapshot.url.length === 0) {
         continue;
       }
 
-      // verify the custom data property "breadcrumb" is specified on the route
+      // verify the custom data property "title" is specified on the route
       if (!child.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB)) {
         return this.getBreadcrumbs(child, url, breadcrumbs);
       }
@@ -65,6 +66,8 @@ export class BreadcrumbComponent implements OnInit {
         label: child.snapshot.data[ROUTE_DATA_BREADCRUMB],
         url
       };
+
+      this.rutaActiva = breadcrumb.label;
       breadcrumbs.push(breadcrumb);
 
       // recursive
