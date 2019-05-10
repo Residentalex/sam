@@ -19,7 +19,17 @@ $(document).ready(function(){
             
         })
     }
+    
+    function Toggle() {
+        $('#iresi-toggle').click(function(){
+            console.log('Toggle - Clicked');
+            
+            $('#iresi-left-container').toggleClass('hide');
+        })
+    }
 
+    
+    Toggle();
     Sidebar();
 })
 

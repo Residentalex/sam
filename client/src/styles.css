@@ -4,6 +4,7 @@ html, body{
 
 a, a:hover, a:visited{
     text-decoration: none;
+    cursor: pointer;
 }
 
 .resi-main-container{
@@ -14,6 +15,11 @@ a, a:hover, a:visited{
     min-height: 100%;
     width: 250px;
     border-right: 1px solid #dfe0e1;
+    float: left;
+}
+
+.resi-left-container.hide{
+    display: none;
 }
 
 .resi-left-container a{
@@ -117,4 +123,9 @@ a, a:hover, a:visited{
 .resi-sidebar-footer a:hover,
 .resi-sidebar-footer a:visited{
     background: #292e33;
+}
+
+.resi-navbar{
+    background: #a1ccf7;
+    border-bottom: 1px solid #c6c7c8;
 }
