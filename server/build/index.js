@@ -20,7 +20,7 @@ class Server {
         // Muestra en consola las peticiones del cliente
         this.app.use(morgan_1.default('dev'));
         // Permite que Angular haga peticiones
-        this.app.use(cors_1.default);
+        this.app.use(cors_1.default());
         // Permite recibir y enviar los datos en modo json
         this.app.use(express_1.default.json());
         // Permite recibir y enviar datos en formato html

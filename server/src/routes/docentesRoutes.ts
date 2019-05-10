@@ -1,4 +1,5 @@
 import { Router } from "express";
+import docentesController from "../controllers/docentesController";
 
 class IndexRoutes {
 
@@ -10,7 +11,11 @@ class IndexRoutes {
 
     Config(): void{
         // se crea una ruta inicial, envia como respuesta "Hello"
-        this.router.get('/', (req, res) => res.send('Docentes'));
+        this.router.get('/', docentesController.List );
+        this.router.get('/:id', docentesController.filter);
+        this.router.post('/', docentesController.Create);
+        this.router.put('/:id', docentesController.Update);
+        this.router.delete('/:id', docentesController.Delete);
     }
 }
 
