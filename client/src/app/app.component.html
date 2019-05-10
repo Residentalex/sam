@@ -20,11 +20,11 @@
           <a href="#" class="nav-link" data-toggle="collapse" data-target="#docentes" aria-expanded="false"><i
               class="fas fa-chalkboard-teacher"></i>Docentes <span class="fas fa-chevron-down"></span></a>
           <ul class="list-unstyled collapse resi-child" id="docentes">
-            <li><a href="#">Ficha</a></li>
-            <li><a href="#">Consulta</a></li>
-            <li><a href="#">Horario</a></li>
-            <li><a href="#">Ausencias</a></li>
-            <li><a href="#">Evaluación</a></li>
+            <li><a href="#" routerLink="/docentes/docentes-form">Ficha</a></li>
+            <li><a href="#" routerLink="/docentes/docentes-search">Consulta</a></li>
+            <li><a href="#" routerLink="/docentes/docentes-scheadule">Horario</a></li>
+            <li><a href="#" routerLink="/docentes/docentes-absences">Ausencias</a></li>
+            <li><a href="#" routerLink="/docentes/docentes-evaluation">Evaluación</a></li>
           </ul>
         </li>
 
@@ -95,7 +95,10 @@
       <a class="navbar-brand" id="iresi-toggle"><i class="fas fa-bars"></i></a>
     </div>
 
-    <div class="resi-page-content"></div>
+    <!--Contenido de pagina-->
+    <div class="resi-page-content">
+      <router-outlet></router-outlet>
+    </div>
     <div class="resi-footer"></div>
   </div>
 
