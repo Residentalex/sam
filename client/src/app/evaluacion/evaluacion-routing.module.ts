@@ -6,7 +6,7 @@ import { EvaluacionRecordComponent } from './evaluacion-record/evaluacion-record
 
 const routes: Routes = [
   {path: 'evaluacion-method', component: EvaluacionMethodComponent, data: {title: 'Metodo de Evaluación'}},
-  {path: 'evaluacion-record', component: EvaluacionRecordComponent, data: {title: 'Registro'}}
+  {path: '', component: EvaluacionRecordComponent, data: {title: 'Registro'}}
 ];
 
 @NgModule({

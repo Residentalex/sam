@@ -10,7 +10,7 @@ import { AlumnosRecordComponent } from './alumnos-record/alumnos-record.componen
 
 const routes: Routes = [
   {path: 'alumnos-form', component: AlumnosFormComponent, data: {title: 'Matriculación'}},
-  {path: 'alumnos-search', component: AlumnosSearchComponent, data: {title: 'Consulta'}},
+  {path: '', component: AlumnosSearchComponent, data: {title: 'Consulta'}},
   {path: 'alumnos-scheadule', component: AlumnosScheaduleComponent, data: {title: 'Horario'}},
   {path: 'alumnos-section', component: AlumnosSectionComponent, data: {title: 'Asignación de Sección'}},
   {path: 'alumnos-absences', component: AlumnosAbsencesComponent, data: {title: 'Ausencias'}},

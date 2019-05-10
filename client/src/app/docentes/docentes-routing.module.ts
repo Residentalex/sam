@@ -8,7 +8,7 @@ import { DocentesEvaluationComponent } from './docentes-evaluation/docentes-eval
 
 const routes: Routes = [
   {path: 'docentes-form', component: DocentesFormComponent, data: {title: 'Ficha'}},
-  {path: 'docentes-search', component: DocentesSearchComponent, data: {title: 'Consulta'}},
+  {path: '', component: DocentesSearchComponent, data: {title: 'Consulta'}},
   {path: 'docentes-scheadule', component: DocentesScheaduleComponent, data: {title: 'Horario'}},
   {path: 'docentes-absences', component: DocentesAbsencesComponent, data: {title: 'Ausencias'}},
   {path: 'docentes-evaluation', component: DocentesEvaluationComponent, data: {title: 'Evaluación'}}
