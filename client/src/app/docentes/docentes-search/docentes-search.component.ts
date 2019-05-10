@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DocentesService } from '../docentes.service';
+import { Docentes } from '../docentes';
 
 @Component({
   selector: 'app-docentes-search',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocentesSearchComponent implements OnInit {
 
-  constructor() { }
+  listDocentes: any = [];
+
+  constructor(
+    private docenteService: DocentesService
+  ) { }
 
   ngOnInit() {
+    this.docenteService.getDocentes().subscribe(
+      res => this.listDocentes = res,
+      err => console.log(err)
+    );
   }
 
 }

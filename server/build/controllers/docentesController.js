@@ -19,7 +19,7 @@ class DocentesController {
     List(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const docentes = yield database_2.default.query("SELECT * FROM docentes");
-            res.json({ docentes });
+            res.json(docentes);
         });
     }
     filter(req, res) {

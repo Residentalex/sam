@@ -10,7 +10,7 @@ class DocentesController {
 
     public async List(req: Request, res: Response) {
         const docentes = await pool.query("SELECT * FROM docentes")
-        res.json({docentes});
+        res.json(docentes);
     }
 
     public async filter(req: Request, res: Response){

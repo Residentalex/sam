@@ -1,3 +1,18 @@
-<p>
-  docentes-search works!
-</p>
+<div class="table-responsive w-100">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Tipo de Identificación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let docente of listDocentes">
+        <td>{{docente.idDocente}}</td>
+        <td>{{docente.nombre}}</td>
+        <td>{{docente.tipoDocumento}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
